@@ -12,204 +12,269 @@
         }
 
         body {
-            font-family: 'Georgia', 'Times New Roman', serif;
+            font-family: 'Georgia', serif;
             background: linear-gradient(135deg, #d4a574 0%, #c9904d 50%, #b8894a 100%);
+            background-attachment: fixed;
             min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
+            padding: 60px 20px;
         }
 
         .container {
             max-width: 750px;
-            background: linear-gradient(to bottom, #e8c5a0 0%, #d4a574 100%);
+            margin: 0 auto;
+            background: linear-gradient(to bottom, #fef9f3 0%, #f5e6d3 100%);
             border-radius: 20px;
-            padding: 50px 45px;
-            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.4);
+            padding: 55px 50px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
             color: #3d2817;
+            position: relative;
         }
 
-        .header {
-            text-align: center;
-            margin-bottom: 40px;
-        }
-
-        .logo {
-            font-size: 3.5em;
-            margin-bottom: 15px;
+        .container::before {
+            content: '☕';
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            font-size: 4em;
+            opacity: 0.15;
         }
 
         h1 {
-            font-size: 2.5em;
+            font-size: 2.6em;
             color: #3d2817;
-            margin-bottom: 10px;
+            margin-bottom: 45px;
+            text-align: center;
             font-weight: normal;
-            font-style: italic;
+            position: relative;
+            padding-bottom: 20px;
         }
 
-        .subtitle {
-            font-size: 1.2em;
-            color: #5a3a1f;
-            font-style: italic;
+        h1::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(to right, transparent, #8b4513, transparent);
         }
 
-        .content {
-            font-size: 1.15em;
+        p {
+            font-size: 1.12em;
             line-height: 1.9;
-            color: #3d2817;
-        }
-
-        .content p {
-            margin-bottom: 22px;
+            margin-bottom: 24px;
+            text-align: justify;
         }
 
         .highlight {
             color: #8b4513;
-            font-weight: 600;
+            font-weight: 700;
+            position: relative;
+            padding: 0 3px;
         }
 
         .quote {
-            margin: 35px 0;
-            padding: 30px;
-            background: rgba(61, 40, 23, 0.15);
+            margin: 50px 0;
+            padding: 35px;
+            background: linear-gradient(135deg, rgba(139, 69, 19, 0.12) 0%, rgba(139, 69, 19, 0.08) 100%);
             border-left: 5px solid #8b4513;
-            border-radius: 10px;
-        }
-
-        .quote p {
-            font-size: 1.4em;
+            border-radius: 12px;
+            font-size: 1.5em;
+            font-style: italic;
+            text-align: center;
             color: #5a3a1f;
             font-weight: 600;
-            margin: 0;
-            font-style: italic;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+
+        .quote::before {
+            content: '"';
+            position: absolute;
+            top: -10px;
+            left: 20px;
+            font-size: 3em;
+            color: rgba(139, 69, 19, 0.2);
+            font-family: Georgia, serif;
         }
 
         .note {
-            margin: 35px 0;
-            padding: 25px;
-            background: rgba(139, 69, 19, 0.12);
+            margin: 40px 0;
+            padding: 28px;
+            background: linear-gradient(to right, rgba(139, 69, 19, 0.15), rgba(139, 69, 19, 0.08));
             border-radius: 12px;
-            font-size: 1.05em;
-            color: #4a2f1a;
-            border: 2px solid rgba(139, 69, 19, 0.2);
+            border: 2px solid rgba(139, 69, 19, 0.25);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+            line-height: 1.85;
         }
 
+        .note-title {
+            display: block;
+            margin-bottom: 12px;
+            font-size: 1.15em;
+            font-weight: 700;
+            color: #5a3a1f;
+            letter-spacing: 0.5px;
+        }
+        
         .note strong {
-            color: #3d2817;
-            font-size: 1.1em;
-        }
-
-        .footer {
-            margin-top: 45px;
-            text-align: center;
+            font-weight: 700;
             color: #5a3a1f;
         }
 
+        .final {
+            text-align: center;
+            font-size: 1.25em;
+            margin-top: 45px;
+            padding: 28px;
+            background: linear-gradient(135deg, rgba(0, 184, 148, 0.15), rgba(0, 206, 201, 0.15));
+            border-radius: 12px;
+            font-weight: 600;
+            color: #3d2817;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            border: 2px solid rgba(0, 184, 148, 0.2);
+        }
+
+        .footer {
+            margin-top: 50px;
+            text-align: center;
+            padding-top: 35px;
+            border-top: 2px solid rgba(139, 69, 19, 0.2);
+        }
+
         .footer p {
-            font-size: 1.1em;
-            margin-bottom: 15px;
+            font-size: 1.15em;
+            margin-bottom: 18px;
+            text-align: center;
         }
 
         .signature {
-            margin-top: 25px;
             font-size: 1.5em;
-            color: #3d2817;
-            font-weight: 600;
+            font-weight: 700;
+            color: #5a3a1f;
             font-style: italic;
         }
 
-        .coffee {
-            font-size: 2em;
-            display: inline-block;
+        .spacer {
+            height: 25px;
         }
 
-        @media (max-width: 600px) {
+        @media (max-width: 768px) {
+            body {
+                padding: 40px 15px;
+            }
+
             .container {
-                padding: 35px 25px;
+                padding: 40px 30px;
             }
             
             h1 {
-                font-size: 2em;
+                font-size: 2.2em;
             }
 
-            .content {
+            p {
+                font-size: 1.08em;
+                text-align: left;
+            }
+
+            .quote {
+                font-size: 1.3em;
+                padding: 28px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 35px 25px;
+            }
+
+            h1 {
+                font-size: 1.9em;
+            }
+
+            p {
                 font-size: 1.05em;
+            }
+
+            .quote {
+                font-size: 1.2em;
             }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="header">
-            <h1>Bonjour, vous ! 💚</h1>
+        <h1>Bonjour, vous ! 💚</h1>
+
+        <p>
+            Sur Twitch, il est compliqué de se faire connaître.  
+            C'est pour cela qu'en pratique, la plupart des influenceurs utilisent des moyens extérieurs : 
+            Twitter, TikTok, YouTube Shorts, Instagram, et bien d'autres.  
+            Moi, j'ai décidé de ne pas le faire et ce choix choque la plupart de mes collègues streamers.
+        </p>
+
+        <p>
+            Mon parcours sur Twitch, avec vous, est un véritable investissement <span class="highlight">humain et authentique</span>.  
+            Je ne peux pas réduire le personnage de Butler à un simple produit.  
+            Mon objectif est simple : <span class="highlight">construire une communauté soudée avant la quantité</span>.
+        </p>
+
+        <div class="quote">
+            "C'est toi, mon réseau."
         </div>
 
-        <div class="content">
-            <p>
-                Sur Twitch, il est compliqué de se faire connaître.  
-                C’est pour cela qu’en pratique, la plupart des influenceurs utilisent des moyens extérieurs : 
-                Twitter, TikTok, YouTube Shorts, Instagram, et bien d’autres.  
-                Moi, j’ai décidé de ne pas le faire et ce choix choque la plupart de mes collègues streamers.
-            </p>
+        <p>
+            Je souhaite que chaque arrivée sur la chaîne soit à la fois la découverte d'un streamer passionné 
+            mais aussi d'une communauté exceptionnelle, construite pas à pas.  
+            Une communauté soudée qui fait partie intégrante de l'expérience que je propose.
+        </p>
 
-            <p>
-                Mon parcours sur Twitch, avec vous, est un véritable investissement <span class="highlight">humain et authentique</span>.  
-                Je ne peux pas réduire le personnage de Butler à un simple produit.  
-                Mon objectif est simple : <span class="highlight">construire une communauté soudée avant la quantité</span>.
-            </p>
+        <div class="spacer"></div>
 
-            <div class="quote">
-                <p>"C’est toi, mon réseau." <span class="coffee"></span></p>
-            </div>
+        <p>
+            Un pari risqué ? Oui. C'est très idéaliste.  
+            La plupart des streamers comptent sur un coup de pouce extérieur pour être mis en avant sur Twitch.  
+            Mon choix peut sembler contre-intuitif, mais c'est une décision à la fois personnelle et presque spirituelle.  
+        </p>
 
-            <p>
-                Je souhaite que chaque arrivée sur la chaîne soit à la fois la découverte d’un streamer passionné 
-                mais aussi d’une communauté exceptionnelle, construite pas à pas.  
-                Une communauté soudée qui fait partie intégrante de l’expérience que je propose.
-            </p>
+        <div class="note">
+            <span class="note-title">En une seule phrase :</span> 
+            la <strong>confiance</strong>, l'<strong>échange</strong> et l'<strong>authenticité</strong> 
+            sont au cœur de mon aventure et je ne peux en aucun cas les mettre au second plan.  
+            Comment défendre ces valeurs si l'on devient un simple produit de consommation, 
+            partagé entre plusieurs plateformes ?  
+            En plus d'amener un stress indéniable, cela efface ce qui rend notre métier sur Twitch humain.
+        </div>
 
-            <p>
-                Un pari risqué ? Oui. C’est très idéaliste.  
-                La plupart des streamers comptent sur un coup de pouce extérieur pour être mis en avant sur Twitch.  
-                Mon choix peut sembler contre-intuitif, mais c’est une décision à la fois personnelle et presque spirituelle.  
-            </p>
+        <p> 
+            MrButler est un concept, un personnage, mais surtout et avant tout <span class="highlight">une aventure que nous mènerons ensemble</span>.  
+            Je ne souhaite, en aucun cas, des acteurs artificiels extérieurs. J'ai fait le choix de concentrer toute mon énergie sur mes streams pour être pleinement présent avec nous, sans me dissiper sur d'autres plateformes.
+        </p>
 
-            <div class="note">
-                <strong>En une seule phrase :</strong> la <strong>confiance</strong>, l’<strong>échange</strong> et l’<strong>authenticité</strong> 
-                sont au cœur de mon aventure et je ne peux en aucun cas les mettre au second plan.  
-                Comment défendre ces valeurs si l’on devient un simple produit de consommation, 
-                partagé entre plusieurs plateformes ?  
-                En plus d’amener un stress indéniable, cela efface ce qui rend notre métier sur Twitch humain.
-            </div>
+        <div class="spacer"></div>
 
-            <p> 
-                MrButler est un concept, un personnage, mais surtout et avant tout <span class="highlight">une aventure que nous mènerons ensemble</span>.  
-                Je ne souhaite, en aucun cas, des acteurs artificiels extérieurs. J'ai fait le choix de concentrer toute mon énergie sur mes streams pour être pleinement présent avec nous, sans me dissiper sur d'autres plateformes.
-            </p>
+        <p>
+            Nous sommes une communauté unique.  
+            Chaque personne que vous rencontrez ici a découvert la chaîne grâce au bouche-à-oreille, 
+            grâce à quelqu'un déjà actif parmi vous.  
+            Et ça, c'est à la fois aussi fort qu'exotique.
+        </p>
 
-            <p>
-                Nous sommes une communauté unique.  
-                Chaque personne que vous rencontrez ici a découvert la chaîne grâce au bouche-à-oreille, 
-                grâce à quelqu’un déjà actif parmi vous.  
-                Et ça, c’est à la fois aussi fort qu'exotique.
-            </p>
+        <p>
+            Je profite de cet instant pour vous remercier.  
+            Certains d'entre vous parlent de mon existence à leurs amis, leur famille, leurs collègues…   
+            Je suis extrêmement heureux de savoir qu'aujourd'hui, j'embarque dans mes aventures  
+            toutes plus loufoques les unes que les autres, une partie de vous.
+        </p>
 
-            <p>
-                Je profite de cet instant pour vous remercier.  
-                Certains d’entre vous parlent de mon existence à leurs amis, leur famille, leurs collègues…   
-                Je suis extrêmement heureux de savoir qu’aujourd’hui, j’embarque dans mes aventures  
-                toutes plus loufoques les unes que les autres, une partie de vous.
-            </p>
+        <p>
+            Merci d'être ce que vous êtes. Merci pour votre bienveillance.  
+            Et n'oubliez pas : même si mes oreilles ne l'entendent pas, <span class="highlight">mon cœur, lui, l'entend</span>.
+        </p>
 
-            <p>
-                Merci d’être ce que vous êtes. Merci pour votre bienveillance.  
-                Et n’oubliez pas : même si mes oreilles ne l'entendent pas, <span class="highlight">mon cœur, lui, l'entend</span>.
-            </p>
-
-            <p style="text-align: center; font-size: 1.25em; color: #5a3a1f; margin-top: 30px; font-weight: 600;">
-                Tu as lu tout ça ?! N'hésite pas à me le dire ! 💚
-            </p>
+        <div class="final">
+            Tu as lu tout ça ?! N'hésite pas à me le dire ! 💚
         </div>
 
         <div class="footer">
